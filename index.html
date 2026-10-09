@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comfort-Air & Primo Plumbing | Year-Round Comfort Solution</title>
+    <meta name="description" content="Expert commercial & residential HVAC, AC repair, and plumbing services in San Antonio, TX since 1964. Year-round comfort solutions with 24/7 priority service.">
+    
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0F172A',
+                            navyDark: '#0B0F19',
+                            darkSection: '#12161F',
+                            cardDark: '#1B202D',
+                            blue: '#1E40AF',
+                            blueBright: '#2563EB',
+                            sky: '#0284C7',
+                            iceBg: '#F1F7FC',
+                            iceCard: '#EAF3FB',
+                            mintCard: '#F0FDF4',
+                            orange: '#F25F22',
+                            orangeHover: '#DC4C10',
+                            amber: '#F59E0B',
+                            yellowReview: '#FFCD00',
+                            redTag: '#E11D48',
+                            slateText: '#475569'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Segoe UI', 'system-ui', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'Impact', 'Outfit', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -5px rgba(15, 23, 42, 0.05)',
+                        'floating': '0 20px 40px -12px rgba(15, 23, 42, 0.12)',
+                        'glass': '0 8px 32px 0 rgba(15, 23, 42, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts & Lucide Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background: #F1F7FC;
+            background-image: 
+                radial-gradient(at 10% 10%, rgba(224, 242, 254, 0.7) 0px, transparent 50%),
+                radial-gradient(at 90% 15%, rgba(254, 237, 222, 0.5) 0px, transparent 50%),
+                radial-gradient(at 50% 90%, rgba(241, 247, 252, 1) 0px, transparent 60%);
+            background-attachment: fixed;
+        }
+
+        .glass-pill {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.12);
+        }
+
+        .frosted-glass-widget {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .frosted-circle-btn {
+            background: rgba(255, 255, 255, 0.28);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+        .frosted-circle-btn:hover {
+            background: rgba(255, 255, 255, 0.45);
+            transform: scale(1.08);
+        }
+
+        .hero-banner-container {
+            border-radius: 36px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .speech-bubble {
+            position: relative;
+        }
+        .speech-bubble:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 20px;
+            border-width: 8px 8px 0;
+            border-style: solid;
+            border-color: rgba(51, 65, 85, 0.9) transparent;
+            display: block;
+            width: 0;
+        }
+
+        .concentric-rings {
+            background-image: radial-gradient(circle, transparent 40px, rgba(242, 95, 34, 0.18) 41px, transparent 43px, transparent 70px, rgba(242, 95, 34, 0.12) 71px, transparent 73px, transparent 100px, rgba(242, 95, 34, 0.08) 101px, transparent 103px);
+        }
+
+        .play-btn-pulse {
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+            animation: pulse-ring 2s infinite cubic-bezier(0.66, 0, 0, 1);
+        }
+        @keyframes pulse-ring {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 16px rgba(255, 255, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+            }
+        }
+
+        /* Modern Floating & Reveal Keyframes */
+        @keyframes float-gentle {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-7px); }
+        }
+        @keyframes float-delayed {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(7px); }
+        }
+        @keyframes glow-pulse {
+            0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 15px rgba(242, 95, 34, 0.4)); }
+            50% { opacity: 1; filter: drop-shadow(0 0 25px rgba(242, 95, 34, 0.7)); }
+        }
+
+        .animate-float-slow {
+            animation: float-gentle 4.5s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: float-delayed 5s ease-in-out infinite 1s;
+        }
+        .animate-glow {
+            animation: glow-pulse 3s ease-in-out infinite;
+        }
+
+        /* Seamless Infinite Right-to-Left and Left-to-Right Marquee */
+        @keyframes marquee-rtl {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes marquee-ltr {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+
+        .marquee-track-rtl {
+            display: flex;
+            width: max-content;
+            animation: marquee-rtl 25s linear infinite;
+        }
+        .marquee-track-rtl:hover {
+            animation-play-state: paused;
+        }
+
+        .marquee-track-ltr {
+            display: flex;
+            width: max-content;
+            animation: marquee-ltr 28s linear infinite;
+        }
+        .marquee-track-ltr:hover {
+            animation-play-state: paused;
+        }
+
+        /* Directional Scroll Reveal Animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.93);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .is-revealed {
+            opacity: 1 !important;
+            transform: translate(0, 0) scale(1) !important;
+        }
+
+        /* Hover lift effect for cards */
+        .hover-lift {
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 22px 40px -12px rgba(15, 23, 42, 0.14);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 9px;
+            height: 9px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F7FC;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94A3B8;
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-navy antialiased selection:bg-brand-orange selection:text-white">
+
+    <!-- 1. TOP HEADER NAVIGATION -->
+    <header class="w-full pt-6 pb-4 px-4 sm:px-8 lg:px-14 sticky top-0 z-40 bg-white/80 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <!-- Brand Logo with Transparent Background -->
+            <a href="#" class="flex items-center space-x-3 group transition transform hover:scale-105">
+                <img src="assets/images/logo-dark.png" alt="Comfort-Air Engineering, Inc. & Primo Plumbing, Inc." class="h-10 sm:h-12 w-auto object-contain">
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                <a href="#" class="text-brand-navy font-bold hover:text-brand-orange transition">Home</a>
+                <a href="#about" class="hover:text-brand-orange transition">About us</a>
+                <a href="#services" class="hover:text-brand-orange transition">Services</a>
+                <a href="#why-choose-us" class="hover:text-brand-orange transition">Why Choose Us</a>
+                <a href="#testimonials-video" class="hover:text-brand-orange transition">Testimonials</a>
+                <a href="#process" class="hover:text-brand-orange transition">Process</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center space-x-3">
+                <a href="#contact-section" class="hidden sm:inline-flex px-5 py-2.5 rounded-full bg-white/80 hover:bg-white text-slate-700 font-bold text-xs sm:text-sm border border-slate-200/80 shadow-soft transition">
+                    Contact Us
+                </a>
+                
+                <a href="tel:2104941691" class="px-5 py-2.5 rounded-full bg-brand-orange hover:bg-brand-orangeHover text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition flex items-center space-x-2">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    <span>Schedule a Call</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- 2. SIGNATURE HERO SECTION -->
+    <section class="pt-8 pb-14 px-4 sm:px-8 lg:px-14">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-4xl mx-auto pt-4 pb-12 sm:pb-16 relative">
+                <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-1">
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 font-display">
+                        Year-Round
+                    </h1>
+                    <div class="glass-pill shadow-soft px-3.5 py-1.5 rounded-full text-xs font-bold text-slate-700 flex items-center space-x-1.5 transform hover:scale-105 transition cursor-default animate-float-slow">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                        <span>2.4K+ Reviews</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-2">
+                    <div class="glass-pill shadow-soft px-3.5 py-1.5 rounded-full text-xs font-bold text-slate-700 flex items-center space-x-1.5 transform hover:scale-105 transition cursor-default animate-float-slow">
+                        <span class="text-brand-orange">★</span>
+                        <span>60+ Yrs Exp</span>
+                    </div>
+
+                    <h2 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight font-display">
+                        <span class="text-brand-blueBright">Comfort</span> <span class="text-slate-900">Solution</span>
+                    </h2>
+
+                    <div class="glass-pill shadow-soft px-3.5 py-1.5 rounded-full text-xs font-bold text-slate-700 flex items-center space-x-1.5 transform hover:scale-105 transition cursor-default animate-float-delayed">
+                        <span class="text-sky-500">📍</span>
+                        <span>San Antonio, TX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative max-w-6xl mx-auto">
+                <div class="hero-banner-container bg-slate-800 shadow-2xl relative min-h-[420px] sm:min-h-[520px] lg:min-h-[590px] flex items-end">
+                    
+                    <img 
+                        src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop" 
+                        alt="Comfort-Air certified HVAC technicians inspecting climate systems" 
+                        class="absolute inset-0 w-full h-full object-cover object-center filter brightness-[0.92]"
+                    />
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/15"></div>
+
+                    <div class="relative z-10 w-full p-6 sm:p-10 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6">
+                        <div class="frosted-glass-widget rounded-2xl p-4 sm:p-5 flex items-center space-x-4 shadow-glass text-white">
+                            <div>
+                                <div class="flex items-center space-x-1">
+                                    <span class="text-2xl font-black font-display">4.9</span>
+                                    <div class="flex text-amber-400 text-xs ml-1.5">
+                                        ★★★★★
+                                    </div>
+                                </div>
+                                <p class="text-[11px] font-semibold text-slate-200 uppercase tracking-wider mt-0.5">Average Score</p>
+                            </div>
+                            
+                            <button onclick="openBookingModal('General Diagnostic')" class="w-11 h-11 rounded-full frosted-circle-btn flex items-center justify-center hover:bg-white/40 transition group">
+                                <i data-lucide="arrow-up-right" class="w-5 h-5 text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
+                            </button>
+                        </div>
+
+                        <div class="bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-2xl flex items-center justify-between sm:space-x-8 min-w-[280px] sm:min-w-[320px]">
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">San Antonio 24/7</p>
+                                <h3 class="font-extrabold text-base sm:text-lg text-brand-navy">Expert System Repair</h3>
+                            </div>
+                            
+                            <div class="flex items-center space-x-2">
+                                <button onclick="openBookingModal('Emergency Service Details')" class="px-4 py-2.5 rounded-full bg-brand-navy hover:bg-slate-800 text-white font-bold text-xs tracking-wider uppercase transition">
+                                    Details
+                                </button>
+                                <button onclick="openBookingModal('Instant Dispatch')" class="w-9 h-9 rounded-full bg-brand-navy hover:bg-slate-800 text-white flex items-center justify-center transition">
+                                    <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DYNAMIC RIGHT-TO-LEFT INFINITE MOVING TICKER -->
+    <div class="w-full bg-brand-navyDark py-4 overflow-hidden border-y border-slate-800 shadow-xl relative z-20">
+        <div class="marquee-track-rtl flex items-center space-x-8 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-300">
+            <!-- Set 1 -->
+            <div class="flex items-center space-x-2 text-white bg-white/5 px-4 py-1.5 rounded-full border border-white/10 hover:border-brand-orange transition">
+                <span class="text-brand-orange text-base">⚡</span>
+                <span>24/7 Emergency AC & Heating Repair</span>
+            </div>
+            <span class="text-brand-orange text-lg">&bull;</span>
+            <div class="flex items-center space-x-2 text-white bg-white/5 px-4 py-1.5 rounded-full border border-white/10 hover:border-brand-orange transition">
+                <span class="text-amber-400 text-base">★</span>
+                <span>2,400+ Verified 5-Star Reviews</span>
+            </div>
+            <span class="text-brand-orange text-lg">&bull;</span>
+            <div class="flex items-center space-x-2 text-white bg-white/5 px-4 py-1.5 rounded-full border border-white/10 hover:border-brand-orange transition">
+                <span class="text-emerald-400 text-base">🛡️</span>
+                <span>100% Satisfaction or Money Back</span>
+            </div>
+            <span class="text-brand-orange text-lg">&bull;</span>
+            <div class="flex items-center space-x-2 text-white bg-white/5 px-4 py-1.5 rounded-full border border-white/10 hover:border-brand-orange transition">
+                <span class="text-sky-400 text-base">🔧</span>
+                <span>Primo Plumbing Master Licensed Plumbers</span>
+            </div>
+            <span class="text-brand-orange text-lg">&bull;</span>
+            <div class="flex items-center space-x-2 text-white bg-white/5 px-4 py-1.5 rounded-full border border-white/10 hover:border-brand-orange transition">
+                <span class="text-brand-orange text-base">⏱️</span>
+                <span>Fast 15-Minute Priority Dispatch</span>
+            </div>
+            <span class="text-brand-orange text-lg">&bull;</span>
+            <div class="flex items-center space-x-2 text-white bg-white/5 px-4 py-1.5 rounded-full border border-white/10 hover:border-brand-orange transition">
+                <span class="text-amber-400 text-base">🏆</span>
+                <span>San Antonio’s #1 Rated HVAC Company</span>
+            </div>
+            <span class="text-brand-orange text-lg">&bull;</span>
+            <div class="flex items-center space-x-2 text-white bg-white/5 px-4 py-1.5 rounded-full border border-white/10 hover:border-brand-orange transition">
+                <span class="text-emerald-400 text-base">💎</span>
+                <span>Zero Hidden Fees & Transparent Flat-Rate</span>
+            </div>
+            <span class="text-brand-orange text-lg">&bull;</span>
+
+            <!-- Set 2 (Identical for seamless infinite scroll) -->
+            <div class="flex items-center space-x-2 text-white bg-white/5 px-4 py-1.5 rounded-full border border-white/10 hover:border-brand-orange transition">
+                <span class="text-brand-orange text-base">⚡</span>
+                <span>24/7 Emergency AC & Heating Repair</span>
+            </div>
+            <span class="text-brand-orange text-lg">&bull;</span>
+            <div class="flex items-center space-x-2 text-white bg-white/5 px-4 py-1.5 rounded-full border border-white/10 hover:border-brand-orange transition">
+                <span class="text-amber-400 text-base">★</span>
+                <span>2,400+ Verified 5-Star Reviews</span>
+            </div>
+            <span class="text-brand-orange text-lg">&bull;</span>
+            <div class="flex items-center space-x-2 text-white bg-white/5 px-4 py-1.5 rounded-full border border-white/10 hover:border-brand-orange transition">
+                <span class="text-emerald-400 text-base">🛡️</span>
+                <span>100% Satisfaction or Money Back</span>
+            </div>
+            <span class="text-brand-orange text-lg">&bull;</span>
+            <div class="flex items-center space-x-2 text-white bg-white/5 px-4 py-1.5 rounded-full border border-white/10 hover:border-brand-orange transition">
+                <span class="text-sky-400 text-base">🔧</span>
+                <span>Primo Plumbing Master Licensed Plumbers</span>
+            </div>
+            <span class="text-brand-orange text-lg">&bull;</span>
+            <div class="flex items-center space-x-2 text-white bg-white/5 px-4 py-1.5 rounded-full border border-white/10 hover:border-brand-orange transition">
+                <span class="text-brand-orange text-base">⏱️</span>
+                <span>Fast 15-Minute Priority Dispatch</span>
+            </div>
+            <span class="text-brand-orange text-lg">&bull;</span>
+            <div class="flex items-center space-x-2 text-white bg-white/5 px-4 py-1.5 rounded-full border border-white/10 hover:border-brand-orange transition">
+                <span class="text-amber-400 text-base">🏆</span>
+                <span>San Antonio’s #1 Rated HVAC Company</span>
+            </div>
+            <span class="text-brand-orange text-lg">&bull;</span>
+            <div class="flex items-center space-x-2 text-white bg-white/5 px-4 py-1.5 rounded-full border border-white/10 hover:border-brand-orange transition">
+                <span class="text-emerald-400 text-base">💎</span>
+                <span>Zero Hidden Fees & Transparent Flat-Rate</span>
+            </div>
+            <span class="text-brand-orange text-lg">&bull;</span>
+        </div>
+    </div>
+
+    <!-- 3. WHY CHOOSE OUR SERVICES SECTION -->
+    <section id="why-choose-us" class="py-20 bg-white px-4 sm:px-8 lg:px-14 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+                
+                <div class="lg:col-span-7 flex flex-col justify-between space-y-6 reveal-left">
+                    <div>
+                        <span class="text-xs font-semibold text-slate-400 tracking-wider">/Why Choose us</span>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 font-display mt-2">
+                            Why choose our Services
+                        </h2>
+                        <p class="text-slate-500 text-sm sm:text-base mt-3 leading-relaxed max-w-xl">
+                            We combine expertise, reliability, and care to deliver the best experience every time.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-soft hover:shadow-floating transition-all duration-300">
+                            <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-800 mb-4">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900">Insured Professionals</h3>
+                            <p class="text-slate-500 text-xs sm:text-sm mt-2 leading-relaxed">
+                                Our plumbers and HVAC specialists are licensed master technicians who adhere to rigorous industry standards.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-soft hover:shadow-floating transition-all duration-300">
+                            <div class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-800 mb-4">
+                                <i data-lucide="badge-dollar-sign" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900">Transparent Pricing</h3>
+                            <p class="text-slate-500 text-xs sm:text-sm mt-2 leading-relaxed">
+                                We believe in honesty. Every service comes with upfront flat-rate pricing and zero hidden surprise charges.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-darkSection text-white rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col justify-between space-y-5">
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-bold font-display text-white">
+                                Work Backed by Customer Satisfaction
+                            </h3>
+                            <p class="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed max-w-lg">
+                                We ensure everything works perfectly and you're completely satisfied before we leave.
+                            </p>
+                        </div>
+
+                        <div>
+                            <a href="#about" class="inline-flex items-center space-x-3 px-6 py-3 rounded-full bg-white text-slate-900 font-bold text-xs uppercase tracking-wider hover:bg-slate-100 transition group shadow-md">
+                                <span>Know more about us</span>
+                                <div class="w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center group-hover:bg-brand-orange transition">
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative reveal-right">
+                    <div class="w-full h-full min-h-[460px] rounded-3xl overflow-hidden shadow-2xl relative hover-lift">
+                        <img 
+                            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop" 
+                            alt="Experienced certified Comfort-Air technician with hard hat and safety vest" 
+                            class="w-full h-full object-cover object-center absolute inset-0 transition duration-700 hover:scale-105"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. NEW SECTION: "WHAT OUR CUSTOMERS SAY" (EXACT MATCH TO YOUR 6TH SCREENSHOT) -->
+    <section id="testimonials-video" class="py-24 bg-brand-ice px-4 sm:px-8 lg:px-14 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3 reveal-up">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 font-display tracking-tight">
+                    What Our Customers Say
+                </h2>
+                <p class="text-slate-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+                    We're proud to have earned the trust of homeowners and businesses through quality service and reliable results.
+                </p>
+            </div>
+
+            <!-- 3-Column Masonry Video & Quote Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto items-start">
+                
+                <!-- COLUMN 1 (Left) -->
+                <div class="space-y-6 reveal-left">
+                    
+                    <!-- Top Quote Card: Sarah Thompson -->
+                    <div class="bg-brand-mintCard rounded-3xl p-6 sm:p-7 border border-emerald-100 shadow-soft hover-lift">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 rounded-full overflow-hidden border border-emerald-200">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="Sarah Thompson" class="w-full h-full object-cover" />
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-slate-900 text-sm">Sarah Thompson</h4>
+                                <p class="text-xs text-slate-500 font-medium">Homeowner, Alamo Heights</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-700 text-xs sm:text-sm leading-relaxed font-medium">
+                            “We had a major leak at midnight, and their team arrived within 30 minutes. They fixed everything quickly and explained the problem clearly. Truly lifesavers!”
+                        </p>
+                    </div>
+
+                    <!-- Bottom Video Card 1 -->
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl h-[360px] group cursor-pointer hover-lift" onclick="openBookingModal('Video Story: Fast Emergency AC Repair')">
+                        <img 
+                            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" 
+                            alt="Happy homeowner testimonial" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+                        
+                        <!-- Glowing Play Button -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-14 h-14 rounded-full bg-white text-slate-900 flex items-center justify-center shadow-2xl play-btn-pulse group-hover:scale-110 transition">
+                                <i data-lucide="play" class="w-6 h-6 fill-slate-900 ml-0.5"></i>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <p class="text-xs font-bold">Watch David's AC Repair Story</p>
+                            <p class="text-[10px] text-slate-200">Fixed same day &bull; San Antonio, TX</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- COLUMN 2 (Center) -->
+                <div class="space-y-6 reveal-up">
+                    
+                    <!-- Top Tall Video Card (Featured Center) -->
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl h-[420px] group cursor-pointer" onclick="openBookingModal('Video Story: Daikin Whole Home Upgrade')">
+                        <img 
+                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" 
+                            alt="Satisfied client testimonial" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+                        
+                        <!-- Glowing Play Button -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-white text-slate-900 flex items-center justify-center shadow-2xl play-btn-pulse group-hover:scale-110 transition">
+                                <i data-lucide="play" class="w-7 h-7 fill-slate-900 ml-0.5"></i>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-5 left-5 right-5 text-white">
+                            <p class="text-sm font-bold">Watch Marcus's Energy Saving Review</p>
+                            <p class="text-xs text-slate-200">Daikin Inverter Installation &bull; 40% Lower Bills</p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Quote Card: Emily Johnson -->
+                    <div class="bg-brand-mintCard rounded-3xl p-6 sm:p-7 border border-emerald-100 shadow-soft relative overflow-hidden">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 rounded-full overflow-hidden border border-emerald-200">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Emily Johnson" class="w-full h-full object-cover" />
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-slate-900 text-sm">Emily Johnson</h4>
+                                <p class="text-xs text-slate-500 font-medium">Office Manager, Stone Oak</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-700 text-xs sm:text-sm leading-relaxed font-medium">
+                            “We hired them for a full commercial HVAC maintenance contract. Seamless coordination, on-time arrivals, and total peace of mind for our 40-person team.”
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- COLUMN 3 (Right) -->
+                <div class="space-y-6 reveal-right">
+                    
+                    <!-- Top Quote Card: Michael Carter -->
+                    <div class="bg-brand-mintCard rounded-3xl p-6 sm:p-7 border border-emerald-100 shadow-soft hover-lift">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 rounded-full overflow-hidden border border-emerald-200">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" alt="Michael Carter" class="w-full h-full object-cover" />
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-slate-900 text-sm">Michael Carter</h4>
+                                <p class="text-xs text-slate-500 font-medium">Restaurant Owner, Boerne</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-700 text-xs sm:text-sm leading-relaxed font-medium">
+                            “Our kitchen drains kept clogging and interrupting service. Their experts solved the issue and gave us tips to prevent future problems. Professional and dependable!”
+                        </p>
+                    </div>
+
+                    <!-- Bottom Video Card 3 -->
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl h-[360px] group cursor-pointer hover-lift" onclick="openBookingModal('Video Story: Commercial Plumbing Solution')">
+                        <img 
+                            src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1000&auto=format&fit=crop" 
+                            alt="Commercial business client testimonial" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20"></div>
+                        
+                        <!-- Glowing Play Button -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-14 h-14 rounded-full bg-white text-slate-900 flex items-center justify-center shadow-2xl play-btn-pulse group-hover:scale-110 transition">
+                                <i data-lucide="play" class="w-6 h-6 fill-slate-900 ml-0.5"></i>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <p class="text-xs font-bold">Watch Julian's Business Review</p>
+                            <p class="text-[10px] text-slate-200">Commercial Plumbing Maintenance &bull; Boerne, TX</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. PRIORITY HEATING & COOLING SECTION -->
+    <section id="contact-section" class="relative bg-brand-darkSection text-white pt-16 pb-24 px-4 sm:px-8 lg:px-14 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-8 relative z-20">
+                <div class="lg:col-span-7 space-y-5 reveal-left">
+                    <div class="inline-flex items-center space-x-2 text-xs font-extrabold tracking-wider text-brand-orange uppercase bg-white/5 px-3.5 py-1.5 rounded-full border border-white/10">
+                        <span>🎯</span>
+                        <span>PERFECT TEMPERATURE, EVERY TIME</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white font-display leading-tight max-w-xl">
+                        Our Priority Heating And Cooling Experts
+                    </h2>
+
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="tel:2104941691" class="px-7 py-3.5 rounded-full bg-brand-orange hover:bg-brand-orangeHover text-white font-extrabold text-sm uppercase tracking-wider shadow-lg transition flex items-center space-x-2 transform hover:scale-105">
+                            <i data-lucide="phone-call" class="w-4 h-4"></i>
+                            <span>CALL US: (210) 494-1691</span>
+                        </a>
+
+                        <div class="speech-bubble bg-slate-800/90 text-slate-200 border border-slate-700/80 px-4 py-2 rounded-2xl text-xs font-bold -rotate-6 shadow-md">
+                            Quick, Easy And<br>Hassle Free
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative z-30 reveal-right">
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 text-slate-800 shadow-2xl border border-slate-100 hover-lift">
+                        <h3 class="text-xl font-bold font-display text-slate-900 mb-5">Get Expert Help Today</h3>
+                        
+                        <form onsubmit="handleQuickFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="Full Name*" class="w-full px-4 py-3 bg-slate-100/90 border-0 rounded-xl text-sm font-medium placeholder-slate-400 focus:bg-white focus:ring-2 focus:ring-brand-orange transition" required>
+                            </div>
+                            <div>
+                                <input type="email" placeholder="Email Address*" class="w-full px-4 py-3 bg-slate-100/90 border-0 rounded-xl text-sm font-medium placeholder-slate-400 focus:bg-white focus:ring-2 focus:ring-brand-orange transition" required>
+                            </div>
+                            <div>
+                                <select class="w-full px-4 py-3 bg-slate-100/90 border-0 rounded-xl text-sm font-medium text-slate-700 focus:bg-white focus:ring-2 focus:ring-brand-orange transition" required>
+                                    <option value="" disabled selected>Service Type*</option>
+                                    <option value="AC Repair">Emergency AC Repair</option>
+                                    <option value="Heating Repair">Heating & Furnace Service</option>
+                                    <option value="Plumbing">Slab Leak & Plumbing</option>
+                                    <option value="Maintenance">Annual Maintenance Tune-up</option>
+                                    <option value="Replacement">Daikin Inverter Replacement Quote</option>
+                                </select>
+                            </div>
+                            <div>
+                                <textarea rows="3" placeholder="Your Message" class="w-full px-4 py-3 bg-slate-100/90 border-0 rounded-xl text-sm font-medium placeholder-slate-400 focus:bg-white focus:ring-2 focus:ring-brand-orange resize-none transition"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-orange to-amber-500 hover:from-brand-orangeHover hover:to-brand-orange text-white font-extrabold text-sm uppercase tracking-wider shadow-lg transition transform hover:-translate-y-0.5">
+                                SEND NOW
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl -mt-6 lg:-mt-12 z-10 min-h-[340px] sm:min-h-[440px] lg:min-h-[500px] reveal-scale">
+                <img 
+                    src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop" 
+                    alt="Technician repairing an outdoor AC system unit with precision tools" 
+                    class="w-full h-full object-cover object-center absolute inset-0 transition duration-700 hover:scale-105"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. HOW WE BRING YOU RELIABLE HEATING AND COOLING -->
+    <section id="process" class="py-20 bg-brand-darkSection text-white px-4 sm:px-8 lg:px-14 relative overflow-hidden">
+        <div class="concentric-rings absolute right-10 top-1/4 w-80 h-80 rounded-full pointer-events-none opacity-40"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6 reveal-left">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight font-display leading-tight text-white mb-8">
+                        How We Bring You Reliable Heating And Cooling
+                    </h2>
+
+                    <!-- Step 01 -->
+                    <div class="bg-brand-cardDark border border-white/10 rounded-2xl p-6 flex items-start space-x-5 hover:border-white/20 transition group hover-lift">
+                        <div class="relative flex-shrink-0">
+                            <div class="w-14 h-14 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-brand-orange text-xl font-bold group-hover:scale-110 transition">
+                                ⚙️
+                            </div>
+                            <span class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-brand-orange text-white text-[11px] font-black flex items-center justify-center shadow-md">
+                                01
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-white group-hover:text-brand-orange transition">Consultation & Assessment</h3>
+                            <p class="text-slate-400 text-sm mt-1.5 leading-relaxed">
+                                We start with a detailed consultation to understand your needs. Our experts assess your space and discuss the best system options.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 02 -->
+                    <div class="bg-gradient-to-r from-brand-orange to-amber-500 rounded-2xl p-6 flex items-start space-x-5 shadow-2xl text-white transform hover:scale-[1.02] transition hover-lift">
+                        <div class="relative flex-shrink-0">
+                            <div class="w-14 h-14 rounded-full bg-white/20 border border-white/40 flex items-center justify-center text-white text-xl font-bold">
+                                📋
+                            </div>
+                            <span class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-white text-brand-orange text-[11px] font-black flex items-center justify-center shadow-md">
+                                02
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-white">Customized Solution & Quote</h3>
+                            <p class="text-white/90 text-sm mt-1.5 leading-relaxed font-medium">
+                                Based on our assessment we provide a clear upfront estimate with the best options tailored for your budget and home comfort.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 03 -->
+                    <div class="bg-brand-cardDark border border-white/10 rounded-2xl p-6 flex items-start space-x-5 hover:border-white/20 transition group hover-lift">
+                        <div class="relative flex-shrink-0">
+                            <div class="w-14 h-14 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-brand-orange text-xl font-bold group-hover:scale-110 transition">
+                                🌐
+                            </div>
+                            <span class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-brand-orange text-white text-[11px] font-black flex items-center justify-center shadow-md">
+                                03
+                            </span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-white group-hover:text-brand-orange transition">Testing & Quality Assurance</h3>
+                            <p class="text-slate-400 text-sm mt-1.5 leading-relaxed">
+                                We thoroughly test your HVAC and plumbing system to ensure optimal performance, peak energy efficiency, and long-term comfort.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4 reveal-right">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl h-[440px] sm:h-[480px] hover-lift">
+                        <img 
+                            src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2070&auto=format&fit=crop" 
+                            alt="Overhead view of outdoor HVAC condenser system" 
+                            class="w-full h-full object-cover transition duration-700 hover:scale-105"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="relative rounded-3xl overflow-hidden shadow-xl h-[212px] sm:h-[232px] hover-lift">
+                            <img 
+                                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop" 
+                                alt="Modern industrial ventilation system ductwork" 
+                                class="w-full h-full object-cover transition duration-700 hover:scale-105"
+                            />
+                        </div>
+                        <div class="relative rounded-3xl overflow-hidden shadow-xl h-[212px] sm:h-[232px] hover-lift">
+                            <img 
+                                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=2069&auto=format&fit=crop" 
+                                alt="Exterior plumbing and AC equipment piping" 
+                                class="w-full h-full object-cover transition duration-700 hover:scale-105"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. YELLOW REVIEWS SECTION WITH INTERACTIVE SLIDER -->
+    <section id="reviews-yellow" class="py-20 bg-brand-yellowReview px-4 sm:px-8 lg:px-14 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-4xl mx-auto mb-12 space-y-3 reveal-up">
+                <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-slate-950 uppercase">
+                    WE'RE KNOWN FOR SHOWING UP AND DOING IT RIGHT
+                </h2>
+                
+                <p class="text-brand-redTag font-black tracking-widest text-sm sm:text-base uppercase">
+                    PUNCTUAL. PROFESSIONAL. KNOWLEDGEABLE.
+                </p>
+
+                <div class="inline-flex items-center space-x-2 px-5 py-2 rounded-full bg-black/85 text-white shadow-xl mt-4">
+                    <div class="w-5 h-5 rounded-full bg-white flex items-center justify-center font-bold text-xs text-blue-600">
+                        G
+                    </div>
+                    <div class="flex text-amber-400 text-xs">
+                        ★★★★★
+                    </div>
+                    <span class="font-bold text-xs sm:text-sm tracking-wide">
+                        4.82 <span class="text-slate-400 text-xs font-normal">(182,301 reviews)</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Horizontal Scrollable Container with Smooth Slide -->
+            <div id="reviewSlider" class="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth no-scrollbar" style="scrollbar-width: none;">
+                
+                <!-- Review Card 1 -->
+                <div class="min-w-[280px] sm:min-w-[340px] lg:min-w-[310px] flex-1 bg-white rounded-2xl p-6 shadow-soft hover:shadow-2xl transition-all duration-300 flex flex-col justify-between hover-lift snap-start">
+                    <div>
+                        <h4 class="font-black text-slate-900 text-sm tracking-wider uppercase mb-2">KALLY E.</h4>
+                        <div class="flex text-amber-400 text-sm mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-slate-700 text-xs sm:text-sm leading-relaxed font-medium">
+                            Outstanding experience from start to finish. They installed our new HVAC system quickly and efficiently. The difference in airflow and comfort is amazing. If you need heating or air conditioning services, this is the company to call!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="min-w-[280px] sm:min-w-[340px] lg:min-w-[310px] flex-1 bg-white rounded-2xl p-6 shadow-soft hover:shadow-2xl transition-all duration-300 flex flex-col justify-between hover-lift snap-start">
+                    <div>
+                        <h4 class="font-black text-slate-900 text-sm tracking-wider uppercase mb-2">ENNA Q.</h4>
+                        <div class="flex text-amber-400 text-sm mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-slate-700 text-xs sm:text-sm leading-relaxed font-medium">
+                            The technicians were respectful, courteous, and transparent about costs upfront. Our home AC was back running in under 2 hours. Very satisfied with Comfort-Air!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="min-w-[280px] sm:min-w-[340px] lg:min-w-[310px] flex-1 bg-white rounded-2xl p-6 shadow-soft hover:shadow-2xl transition-all duration-300 flex flex-col justify-between hover-lift snap-start">
+                    <div>
+                        <h4 class="font-black text-slate-900 text-sm tracking-wider uppercase mb-2">DIM N.</h4>
+                        <div class="flex text-amber-400 text-sm mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-slate-700 text-xs sm:text-sm leading-relaxed font-medium">
+                            Outstanding experience from start to finish. They installed our new HVAC system quickly and efficiently. Great customer service and high quality craftsmanship!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Review Card 4 -->
+                <div class="min-w-[280px] sm:min-w-[340px] lg:min-w-[310px] flex-1 bg-white rounded-2xl p-6 shadow-soft hover:shadow-2xl transition-all duration-300 flex flex-col justify-between hover-lift snap-start">
+                    <div>
+                        <h4 class="font-black text-slate-900 text-sm tracking-wider uppercase mb-2">NINNI S.</h4>
+                        <div class="flex text-amber-400 text-sm mb-4">
+                            ★★★★★
+                        </div>
+                        <p class="text-slate-700 text-xs sm:text-sm leading-relaxed font-medium">
+                            Absolutely great HVAC service! The technician arrived on time, explained the issue clearly, and fixed our AC the same day with fair, honest pricing.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Interactive Slider Controls (Previous / Next Arrows) -->
+            <div class="flex items-center justify-center space-x-4 mt-8">
+                <button onclick="slideReviews(-340)" class="w-11 h-11 rounded-full bg-slate-950 hover:bg-brand-orange text-white flex items-center justify-center shadow-lg transition transform hover:scale-110" aria-label="Previous Review">
+                    <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                </button>
+                <div class="flex items-center space-x-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-600/50"></span>
+                    <span class="w-3.5 h-3.5 rounded-full bg-brand-redTag shadow-md"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-600/50"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-600/50"></span>
+                </div>
+                <button onclick="slideReviews(340)" class="w-11 h-11 rounded-full bg-slate-950 hover:bg-brand-orange text-white flex items-center justify-center shadow-lg transition transform hover:scale-110" aria-label="Next Review">
+                    <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 8. INTERACTIVE FAQ ACCORDION SECTION -->
+    <section class="py-20 bg-white px-4 sm:px-8 lg:px-14 overflow-hidden border-t border-slate-200/80">
+        <div class="max-w-4xl mx-auto space-y-10">
+            <div class="text-center space-y-3 reveal-up">
+                <span class="text-xs font-bold text-brand-orange uppercase tracking-wider bg-brand-orange/10 px-3.5 py-1.5 rounded-full">Got Questions?</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 font-display tracking-tight">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-slate-500 text-sm sm:text-base">Everything you need to know about our 24/7 HVAC and plumbing services in San Antonio.</p>
+            </div>
+
+            <!-- Accordion Items -->
+            <div class="space-y-4 reveal-up">
+                
+                <!-- FAQ 1 -->
+                <div class="border border-slate-200 rounded-2xl p-5 hover:border-brand-orange/50 transition duration-300 shadow-soft bg-white">
+                    <button onclick="toggleFaq(1)" class="w-full flex items-center justify-between text-left font-bold text-slate-900 text-base sm:text-lg">
+                        <span>How fast can a technician arrive for emergency AC repair?</span>
+                        <div id="faq-icon-1" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition duration-300">
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                        </div>
+                    </button>
+                    <div id="faq-content-1" class="hidden mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+                        Our emergency dispatch team is stationed across San Antonio and the Hill Country 24/7/365. For urgent repairs, we typically arrive within 30 to 60 minutes of your call.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-slate-200 rounded-2xl p-5 hover:border-brand-orange/50 transition duration-300 shadow-soft bg-white">
+                    <button onclick="toggleFaq(2)" class="w-full flex items-center justify-between text-left font-bold text-slate-900 text-base sm:text-lg">
+                        <span>Do you provide upfront, flat-rate pricing with no surprises?</span>
+                        <div id="faq-icon-2" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition duration-300">
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                        </div>
+                    </button>
+                    <div id="faq-content-2" class="hidden mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+                        Yes! Before any work begins, our technician provides a complete written diagnostic and flat-rate quote. You approve the price before we start, with zero hidden fees.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-slate-200 rounded-2xl p-5 hover:border-brand-orange/50 transition duration-300 shadow-soft bg-white">
+                    <button onclick="toggleFaq(3)" class="w-full flex items-center justify-between text-left font-bold text-slate-900 text-base sm:text-lg">
+                        <span>Are your technicians licensed, background-checked, and insured?</span>
+                        <div id="faq-icon-3" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition duration-300">
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                        </div>
+                    </button>
+                    <div id="faq-content-3" class="hidden mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+                        100%. All Comfort-Air HVAC specialists hold Texas State Licenses (TACLA001234E) and Primo Plumbing experts are Master Plumbers (#M-38910). Every technician is drug-tested and background-verified.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-slate-200 rounded-2xl p-5 hover:border-brand-orange/50 transition duration-300 shadow-soft bg-white">
+                    <button onclick="toggleFaq(4)" class="w-full flex items-center justify-between text-left font-bold text-slate-900 text-base sm:text-lg">
+                        <span>What warranties do you offer on new installations and repairs?</span>
+                        <div id="faq-icon-4" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 transition duration-300">
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                        </div>
+                    </button>
+                    <div id="faq-content-4" class="hidden mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+                        We offer up to 10-year parts & labor warranties on new Daikin HVAC system installations and a 100% Satisfaction Guarantee on all plumbing and heating repairs.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. HIGH-CONVERTING BOTTOM CTA -->
+    <section class="py-16 text-center px-4 bg-brand-ice border-t border-slate-200/80 reveal-up">
+        <div class="max-w-3xl mx-auto space-y-5">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-display">Ready for Guaranteed Comfort?</h2>
+            <p class="text-slate-500 text-sm sm:text-base">Join over 60 years of happy San Antonio homeowners and business partners. Transparent quotes with zero surprise fees.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                <a href="tel:2104941691" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-brand-navy hover:bg-slate-800 text-white font-bold text-sm shadow-md transition flex items-center justify-center space-x-2 transform hover:scale-105">
+                    <i data-lucide="phone-call" class="w-4 h-4 text-emerald-400"></i>
+                    <span>Call (210) 494-1691</span>
+                </a>
+                <button onclick="openBookingModal('General Schedule')" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-brand-orange hover:bg-brand-orangeHover text-white font-bold text-sm shadow-md transition transform hover:scale-105">
+                    Schedule Online Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. COMPREHENSIVE LUXURY FOOTER -->
+    <footer class="bg-brand-navyDark text-slate-300 pt-16 pb-10 px-4 sm:px-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto space-y-12">
+            
+            <!-- Main 4-Column Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
+                
+                <!-- Col 1: Brand & Credentials (5 cols) -->
+                <div class="lg:col-span-4 space-y-5">
+                    <a href="#" class="inline-block transition transform hover:scale-105">
+                        <img src="assets/images/logo-light.png" alt="Comfort-Air Engineering & Primo Plumbing" class="h-12 w-auto object-contain">
+                    </a>
+                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-normal">
+                        San Antonio’s trusted leader for residential & commercial HVAC and full-service plumbing since 1964. Family-owned, transparent flat-rate pricing, and 100% satisfaction guaranteed.
+                    </p>
+                    
+                    <div class="space-y-2 pt-1 text-xs text-slate-400">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-brand-orange shrink-0"></i>
+                            <span class="font-medium text-slate-300">HVAC License: <strong class="text-white">TACLA001234E</strong></span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="wrench" class="w-4 h-4 text-brand-orange shrink-0"></i>
+                            <span class="font-medium text-slate-300">Master Plumber: <strong class="text-white">#M-38910</strong></span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-3 pt-2">
+                        <a href="tel:2104941691" class="px-4 py-2.5 rounded-full bg-brand-orange hover:bg-brand-orangeHover text-white text-xs font-bold transition flex items-center space-x-2 shadow-lg shadow-orange-500/20 transform hover:-translate-y-0.5">
+                            <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+                            <span>(210) 494-1691</span>
+                        </a>
+                        <button onclick="openBookingModal('Emergency 24/7 Dispatch')" class="px-4 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition border border-white/10 transform hover:-translate-y-0.5">
+                            24/7 Dispatch
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Col 2: Cooling & Heating (2.5 cols) -->
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white border-l-2 border-brand-orange pl-3">Heating & Cooling</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400 font-medium">
+                        <li><a href="#services" class="hover:text-brand-orange transition flex items-center space-x-1.5 hover:translate-x-1 duration-200"><span>›</span> <span>Emergency AC Repair (24/7)</span></a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition flex items-center space-x-1.5 hover:translate-x-1 duration-200"><span>›</span> <span>AC Replacement & Installation</span></a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition flex items-center space-x-1.5 hover:translate-x-1 duration-200"><span>›</span> <span>Heating & Furnace Tune-ups</span></a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition flex items-center space-x-1.5 hover:translate-x-1 duration-200"><span>›</span> <span>Heat Pump Services</span></a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition flex items-center space-x-1.5 hover:translate-x-1 duration-200"><span>›</span> <span>Ductless Mini-Split Systems</span></a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition flex items-center space-x-1.5 hover:translate-x-1 duration-200"><span>›</span> <span>Commercial HVAC Maintenance</span></a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition flex items-center space-x-1.5 hover:translate-x-1 duration-200"><span>›</span> <span>Indoor Air Quality & Filters</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Plumbing Services (2.5 cols) -->
+                <div class="lg:col-span-2 space-y-4">
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white border-l-2 border-brand-orange pl-3">Primo Plumbing</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400 font-medium">
+                        <li><a href="#services" class="hover:text-brand-orange transition flex items-center space-x-1.5 hover:translate-x-1 duration-200"><span>›</span> <span>24/7 Emergency Plumbing</span></a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition flex items-center space-x-1.5 hover:translate-x-1 duration-200"><span>›</span> <span>Water Heater Repair & Install</span></a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition flex items-center space-x-1.5 hover:translate-x-1 duration-200"><span>›</span> <span>Tankless Water Heaters</span></a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition flex items-center space-x-1.5 hover:translate-x-1 duration-200"><span>›</span> <span>Drain Cleaning & Hydro-Jet</span></a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition flex items-center space-x-1.5 hover:translate-x-1 duration-200"><span>›</span> <span>Slab Leak Detection</span></a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition flex items-center space-x-1.5 hover:translate-x-1 duration-200"><span>›</span> <span>Sewer Line Camera Inspection</span></a></li>
+                        <li><a href="#services" class="hover:text-brand-orange transition flex items-center space-x-1.5 hover:translate-x-1 duration-200"><span>›</span> <span>Water Filtration & Softeners</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Location & Operating Hours (3 cols) -->
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white border-l-2 border-brand-orange pl-3">San Antonio Hub</h4>
+                    
+                    <div class="space-y-3 text-xs text-slate-400">
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-brand-orange shrink-0 mt-0.5"></i>
+                            <span>11411 Jones Maltsberger Rd<br>San Antonio, TX 78216</span>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="clock" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                            <div>
+                                <span class="text-white font-semibold">Open 24/7 / 365 Days</span>
+                                <p class="text-[11px] text-slate-500">Live dispatcher on duty day & night</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-brand-orange shrink-0"></i>
+                            <span>service@comfort-air.com</span>
+                        </div>
+                    </div>
+
+                    <!-- Social / Trust Badges (Crisp Inline SVGs with hover effects) -->
+                    <div class="pt-2 flex items-center space-x-3 text-slate-400">
+                        <!-- Facebook -->
+                        <a href="https://facebook.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#1877F2] hover:text-white flex items-center justify-center transition-all duration-300 border border-white/10 hover:border-transparent hover:scale-110 shadow-sm" aria-label="Facebook">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/5 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white flex items-center justify-center transition-all duration-300 border border-white/10 hover:border-transparent hover:scale-110 shadow-sm" aria-label="Instagram">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#0A66C2] hover:text-white flex items-center justify-center transition-all duration-300 border border-white/10 hover:border-transparent hover:scale-110 shadow-sm" aria-label="LinkedIn">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.762-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="https://youtube.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/5 hover:bg-[#FF0000] hover:text-white flex items-center justify-center transition-all duration-300 border border-white/10 hover:border-transparent hover:scale-110 shadow-sm" aria-label="YouTube">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Service Areas Pill Cloud -->
+            <div class="pt-8 border-t border-slate-800/80">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider shrink-0 flex items-center gap-1.5">
+                        <i data-lucide="compass" class="w-3.5 h-3.5 text-brand-orange"></i> Service Areas:
+                    </span>
+                    <div class="flex flex-wrap gap-2 text-[11px] text-slate-400 font-medium">
+                        <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:border-brand-orange/50 transition cursor-default">San Antonio</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:border-brand-orange/50 transition cursor-default">Alamo Heights</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:border-brand-orange/50 transition cursor-default">Stone Oak</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:border-brand-orange/50 transition cursor-default">Boerne</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:border-brand-orange/50 transition cursor-default">New Braunfels</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:border-brand-orange/50 transition cursor-default">Helotes</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:border-brand-orange/50 transition cursor-default">Schertz</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:border-brand-orange/50 transition cursor-default">Cibolo</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:border-brand-orange/50 transition cursor-default">Castle Hills</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:border-brand-orange/50 transition cursor-default">Hollywood Park</span>
+                        <span class="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 hover:border-brand-orange/50 transition cursor-default">Bulverde</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Legal & Developer Credits Bar -->
+            <div class="pt-8 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <div>
+                    <p>&copy; 2026 Comfort-Air Engineering, Inc. & Primo Plumbing, Inc. All rights reserved.</p>
+                </div>
+                
+                <div class="flex items-center space-x-4 text-[11px]">
+                    <a href="#" class="hover:text-slate-300 transition">Privacy Policy</a>
+                    <span>&bull;</span>
+                    <a href="#" class="hover:text-slate-300 transition">Terms of Service</a>
+                    <span>&bull;</span>
+                    <a href="#" class="hover:text-slate-300 transition">Accessibility</a>
+                </div>
+
+                <!-- Required Bottom-Right Developer Signature -->
+                <div class="flex items-center space-x-2 bg-white/5 px-3.5 py-2 rounded-full border border-white/10 hover:border-brand-orange/50 transition shadow-sm">
+                    <span class="text-slate-400 font-medium">Developed by</span>
+                    <a href="https://Yawarabbass.vercel.app" target="_blank" rel="noopener noreferrer" class="font-extrabold text-brand-orange hover:text-amber-400 hover:underline tracking-wide transition">
+                        Yawar Abbas
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- STICKY FLOATING QUICK-CALL PILL (Bottom Left) -->
+    <div class="fixed bottom-6 left-6 z-40">
+        <a href="tel:2104941691" class="flex items-center space-x-3 bg-brand-navy/95 backdrop-blur-md text-white px-4 py-3 rounded-full shadow-2xl border border-white/15 hover:bg-brand-orange transition transform hover:scale-105 group">
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+            </span>
+            <div class="text-left">
+                <p class="text-[10px] uppercase font-bold text-slate-300 group-hover:text-white leading-none">24/7 Priority Hotline</p>
+                <p class="text-xs font-black text-white leading-tight mt-0.5">(210) 494-1691</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- FLOATING SCROLL-TO-TOP BUTTON (Bottom Right) -->
+    <button id="scrollToTopBtn" onclick="scrollToTop()" class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-brand-orange text-white flex items-center justify-center shadow-2xl transition-all duration-300 opacity-0 pointer-events-none hover:bg-brand-orangeHover hover:scale-110" aria-label="Scroll to top">
+        <i data-lucide="chevron-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- INTERACTIVE DISPATCH & BOOKING MODAL -->
+    <div id="bookingModal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 text-slate-800 shadow-2xl relative animate-in fade-in zoom-in duration-200">
+            <button onclick="closeBookingModal()" class="absolute top-5 right-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="mb-6">
+                <span class="px-2.5 py-1 rounded-full bg-brand-orange/15 text-brand-orange text-[11px] font-extrabold uppercase tracking-wider">Fast Priority Dispatch</span>
+                <h3 class="text-2xl font-bold text-brand-navy mt-1">Book Your Appointment</h3>
+                <p class="text-xs text-slate-500 mt-1">Our dispatch team will confirm your slot within 15 minutes.</p>
+            </div>
+
+            <form onsubmit="handleModalSubmit(event)" id="modalForm" class="space-y-4 text-xs font-semibold">
+                <div>
+                    <label class="block text-slate-600 uppercase mb-1">Full Name</label>
+                    <input type="text" placeholder="First & Last Name" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium" required>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-slate-600 uppercase mb-1">Phone Number</label>
+                        <input type="tel" placeholder="(210) 000-0000" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium" required>
+                    </div>
+                    <div>
+                        <label class="block text-slate-600 uppercase mb-1">Zip Code</label>
+                        <input type="text" placeholder="78216" maxlength="5" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium" required>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-slate-600 uppercase mb-1">Selected Service</label>
+                    <input type="text" id="modalServiceInput" class="w-full p-3 bg-slate-100 border border-slate-200 rounded-xl text-sm font-bold text-brand-navy" readonly>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-white font-extrabold text-sm uppercase tracking-wider shadow-md transition mt-2 transform hover:scale-[1.02]">
+                    Confirm Priority Booking
+                </button>
+            </form>
+
+            <div id="modalSuccess" class="hidden text-center py-8 space-y-3">
+                <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center text-3xl font-bold">
+                    ✓
+                </div>
+                <h4 class="text-xl font-bold text-brand-navy">Dispatch Confirmed!</h4>
+                <p class="text-xs text-slate-600 max-w-xs mx-auto">
+                    We have received your service request. A coordinator is calling your phone number now.
+                </p>
+                <button onclick="closeBookingModal()" class="px-6 py-2 rounded-xl bg-brand-navy text-white text-xs font-bold hover:bg-slate-800 transition">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC & SMOOTH INTERACTIONS -->
+    <script>
+        lucide.createIcons();
+
+        function openBookingModal(serviceName) {
+            document.getElementById('modalServiceInput').value = serviceName || 'Standard Diagnostic';
+            document.getElementById('bookingModal').classList.remove('hidden');
+            document.getElementById('modalForm').classList.remove('hidden');
+            document.getElementById('modalSuccess').classList.add('hidden');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            document.getElementById('modalForm').classList.add('hidden');
+            document.getElementById('modalSuccess').classList.remove('hidden');
+        }
+
+        function handleQuickFormSubmit(e) {
+            e.preventDefault();
+            openBookingModal('Priority Online Request');
+            setTimeout(() => {
+                document.getElementById('modalForm').classList.add('hidden');
+                document.getElementById('modalSuccess').classList.remove('hidden');
+            }, 300);
+        }
+
+        // Review Slider Horizontal Scroll
+        function slideReviews(offset) {
+            const slider = document.getElementById('reviewSlider');
+            if (slider) {
+                slider.scrollBy({ left: offset, behavior: 'smooth' });
+            }
+        }
+
+        // Interactive FAQ Toggle
+        function toggleFaq(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            if (content) {
+                const isHidden = content.classList.contains('hidden');
+                // Close all other FAQs
+                for (let i = 1; i <= 4; i++) {
+                    const c = document.getElementById(`faq-content-${i}`);
+                    const ic = document.getElementById(`faq-icon-${i}`);
+                    if (c && i !== id) {
+                        c.classList.add('hidden');
+                        if (ic) ic.classList.remove('rotate-45', 'bg-brand-orange', 'text-white');
+                    }
+                }
+                if (isHidden) {
+                    content.classList.remove('hidden');
+                    if (icon) icon.classList.add('rotate-45', 'bg-brand-orange', 'text-white');
+                } else {
+                    content.classList.add('hidden');
+                    if (icon) icon.classList.remove('rotate-45', 'bg-brand-orange', 'text-white');
+                }
+            }
+        }
+
+        // Scroll-to-Top Logic
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('scrollToTopBtn');
+            if (btn) {
+                if (window.scrollY > 350) {
+                    btn.classList.remove('opacity-0', 'pointer-events-none');
+                    btn.classList.add('opacity-100');
+                } else {
+                    btn.classList.add('opacity-0', 'pointer-events-none');
+                    btn.classList.remove('opacity-100');
+                }
+            }
+        });
+
+        // Directional Scroll Reveal Observer
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale');
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-revealed');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -30px 0px'
+            });
+
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
