@@ -30,3 +30,14 @@ Developed by **[Yawar Abbas](https://Yawarabbass.vercel.app)**
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## 💻 Getting Started
+
+You can run the website locally without installing any dependencies.
+
+### Run Locally
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yawarabbassss/comfort-air.git
