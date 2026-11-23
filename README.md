@@ -41,3 +41,16 @@ You can run the website locally without installing any dependencies.
 
    ```bash
    git clone https://github.com/yawarabbassss/comfort-air.git
+## 🤝 Contributing
+
+We welcome contributions from developers who want to improve Comfort Air.
+
+### How to Contribute
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Submit a pull request with a clear description.
+5. Wait for review and feedback.
+
+Thank you for helping improve Comfort Air!
